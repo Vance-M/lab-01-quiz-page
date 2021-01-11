@@ -28,6 +28,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-image: linear-gradient(skyblue,rgb(202, 175, 121));
 }
 
 section {
@@ -73,7 +74,10 @@ h2 {
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
 }
-
+.lake-tahoe {
+    height: 400px;
+    width: 600px;
+}
 header img {
     height: var(--header-height);
 }
