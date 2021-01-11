@@ -13,6 +13,11 @@ quizButton.addEventListener('click', () => {
         return;
     }
 
+    const firstName = prompt('WHat is your first name?');
+    console.log(firstName);
+    const lastName = prompt('What is your last name?');
+    console.log(lastName);
 
+    prompt('why do you do the thing?');
 
 });
