@@ -52,7 +52,6 @@ quizButton.addEventListener('click', () => {
 
 
 
-
     // if (thirdAnswer.charAt(0).toUpperCase() !== 'Y') {
     //     console.log('hell yea');
     //     correctAnswers++;
