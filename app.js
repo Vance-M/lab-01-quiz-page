@@ -15,9 +15,37 @@ quizButton.addEventListener('click', () => {
 
     const firstName = prompt('WHat is your first name?');
     console.log(firstName);
+
     const lastName = prompt('What is your last name?');
     console.log(lastName);
 
-    prompt('why do you do the thing?');
+    let firstAnswer = prompt('why do you do the thing?');
 
+    let correctAnswers = 0;
+
+    if (firstAnswer.charAt(0).toUpperCase() === 'Y') {
+        console.log('hell yea');
+        correctAnswers++;
+        console.log(correctAnswers)
+    }
+
+    let secondAnswer = prompt('why do you do the thing?');
+
+
+    if (secondAnswer.charAt(0).toUpperCase() === 'Y') {
+        console.log('hell yea');
+        correctAnswers++;
+        console.log(correctAnswers);
+    }
+
+    let thirdAnswer = prompt('why do you do the thing?');
+
+
+    if (thirdAnswer.charAt(0).toUpperCase() === 'Y') {
+        console.log('hell yea');
+        correctAnswers++;
+        console.log(correctAnswers);
+    }
+
+    alert('Thanks for taking my quiz! you got ' + correctAnswers + ' correct!')
 });
