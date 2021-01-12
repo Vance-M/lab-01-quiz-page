@@ -1,3 +1,7 @@
+
+import { countsAsYes } from './utils.js';
+import { countsAsNo } from './utils.js';
+
 // import functions and grab DOM elements
 const quizButton = document.getElementById('quiz-1');
 const secretDiv = document.getElementById('secret-div');
@@ -15,41 +19,53 @@ quizButton.addEventListener('click', () => {
     }
 
     const firstName = prompt('What is your first name?');
-    console.log(firstName);
+
 
     const lastName = prompt('What is your last name?');
-    console.log(lastName);
+ 
 
     let firstAnswer = prompt('Is Tahoe split by 2 States?');
 
-    let correctAnswers = 0;
+    let answerResults = 0;
 
-    if (firstAnswer.charAt(0).toUpperCase() === 'Y') {
-        console.log('hell yea');
-        correctAnswers++;
-        console.log(correctAnswers)
+
+    if (countsAsYes(firstAnswer)){
+        answerResults++;
     }
+
 
     let secondAnswer = prompt('Is Tahoe the second deepest lake in the US?');
 
 
-    if (secondAnswer.charAt(0).toUpperCase() === 'Y') {
-        console.log('hell yea');
-        correctAnswers++;
-        console.log(correctAnswers);
+    if (countsAsYes(secondAnswer)){
+        answerResults++;
     }
+
+
 
     let thirdAnswer = prompt('Is there more then one outlet flowing out of Tahoe?');
 
 
-    if (thirdAnswer.charAt(0).toUpperCase() !== 'Y') {
-        console.log('hell yea');
-        correctAnswers++;
-        console.log(correctAnswers);
+    if (countsAsNo(thirdAnswer)){
+        answerResults++;
     }
 
-    const finalResults = ('Thanks for taking my quiz,' + firstName + ' ' + lastName + '! You got ' + correctAnswers + ' correct!');
 
+
+
+    // if (thirdAnswer.charAt(0).toUpperCase() !== 'Y') {
+    //     console.log('hell yea');
+    //     correctAnswers++;
+    //     console.log(correctAnswers);
+    // }
+
+    const finalResults = ('Thanks for taking my quiz,' + firstName + ' ' + lastName + '! You got ' + answerResults + ' correct!');
+
+    if (answerResults >= 2){
+        secretDiv.style.fontFamily = 'Yusei Magic';
+    } else {
+        secretDiv.style.fontFamily = 'Courier New';
+    }
     
 
     secretDiv.textContent = finalResults;

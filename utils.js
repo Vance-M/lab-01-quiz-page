@@ -1,8 +1,14 @@
 // COunts as a yes function
-const answer = 'Y';
 
-export function countsAsYes(firstAnswer,answer) {
-    if (firstAnswer.charAt(0).toUpperCase() === answer){
+
+export function countsAsYes(Answer) {
+    if (Answer.charAt(0).toUpperCase() === 'Y'){
+        return true;}
+
+}
+
+export function countsAsNo(Answer) {
+    if (Answer.charAt(0).toUpperCase() !== 'Y'){
         return true;}
 
 }

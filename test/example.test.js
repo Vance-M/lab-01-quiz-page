@@ -1,7 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { countsAsYes } from '../utils.js';
-const answer = 'Y';
 
 const test = QUnit.test;
 
@@ -12,7 +11,7 @@ test('time to test a function', (expect) => {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = countsAsYes('ye', answer);
+    const actual = countsAsYes('ye');
 
     //Expect
     // Make assertions about what is expected versus the actual result
