@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 const quizButton = document.getElementById('quiz-1');
+const secretDiv = document.getElementById('secret-div');
 // initialize state
 
 // set event listeners to update state and DOM
@@ -13,7 +14,7 @@ quizButton.addEventListener('click', () => {
         return;
     }
 
-    const firstName = prompt('WHat is your first name?');
+    const firstName = prompt('What is your first name?');
     console.log(firstName);
 
     const lastName = prompt('What is your last name?');
@@ -47,5 +48,12 @@ quizButton.addEventListener('click', () => {
         console.log(correctAnswers);
     }
 
-    alert('Thanks for taking my quiz,' + firstName + ' ' + lastName + '! You got ' + correctAnswers + ' correct!')
+    const finalResults = ('Thanks for taking my quiz,' + firstName + ' ' + lastName + '! You got ' + correctAnswers + ' correct!');
+
+    
+
+    secretDiv.textContent = finalResults;
+
+
+
 });
