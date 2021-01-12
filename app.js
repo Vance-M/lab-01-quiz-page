@@ -19,7 +19,7 @@ quizButton.addEventListener('click', () => {
     const lastName = prompt('What is your last name?');
     console.log(lastName);
 
-    let firstAnswer = prompt('why do you do the thing?');
+    let firstAnswer = prompt('Is Tahoe split by 2 States?');
 
     let correctAnswers = 0;
 
@@ -29,7 +29,7 @@ quizButton.addEventListener('click', () => {
         console.log(correctAnswers)
     }
 
-    let secondAnswer = prompt('why do you do the thing?');
+    let secondAnswer = prompt('Is Tahoe the second deepest lake in the US?');
 
 
     if (secondAnswer.charAt(0).toUpperCase() === 'Y') {
@@ -38,14 +38,14 @@ quizButton.addEventListener('click', () => {
         console.log(correctAnswers);
     }
 
-    let thirdAnswer = prompt('why do you do the thing?');
+    let thirdAnswer = prompt('Is there more then one outlet flowing out of Tahoe?');
 
 
-    if (thirdAnswer.charAt(0).toUpperCase() === 'Y') {
+    if (thirdAnswer.charAt(0).toUpperCase() !== 'Y') {
         console.log('hell yea');
         correctAnswers++;
         console.log(correctAnswers);
     }
 
-    alert('Thanks for taking my quiz! you got ' + correctAnswers + ' correct!')
+    alert('Thanks for taking my quiz,' + firstName + ' ' + lastName + '! You got ' + correctAnswers + ' correct!')
 });
